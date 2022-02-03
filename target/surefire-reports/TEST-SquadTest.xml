@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="SquadTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="SquadTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.2+0"/>
@@ -61,8 +61,8 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="SquadTest" name="getSquadName_squadInstantiatesWithSquadName_Marvel" time="0.004"/>
+  <testcase classname="SquadTest" name="getSquadName_squadInstantiatesWithSquadName_Marvel" time="0.005"/>
   <testcase classname="SquadTest" name="getDescription_squadInstantiatesWithDescription_FightingEvil" time="0"/>
   <testcase classname="SquadTest" name="all_returnsAllInstancesOfSquad_true" time="0"/>
-  <testcase classname="SquadTest" name="squad_instantiatesCorrectly_true" time="0"/>
+  <testcase classname="SquadTest" name="squad_instantiatesCorrectly_true" time="0.001"/>
 </testsuite>
