@@ -1,0 +1,33 @@
+{{#partial "title"}}
+    Hero
+{{/partial}}
+
+{{> nav.hbs}}
+
+{{#partial "content"}}
+    <h3 style="color:white; text-align:center;">Available Heros! </h3>
+    <div class="container  rounded" id="squadlist">
+        {{#if heros}}
+            {{#each heros}}
+                <div class="squadList">
+                    <div class="list">
+                        <h3 style="color: grey">{{ name }}</h3>
+                        <p>Hero's Age <span style="color: grey" >{{ age }}</span></p>
+                        <p>Hero's specialPower <span style="color: grey" >{{ specialPower }}</span></p>
+                        <p>Hero's weakness <span style="color: grey" >{{ weakness }}</span></p>
+                    </div>
+                </div>
+            {{/each}}
+            <hr>
+        {{else}}
+            <div class="emptySquad">
+                <p style="color:white; padding:4px;">no Hero Created!</p>
+            </div>
+        {{/if}}
+        <button type="button" class="btn btn-success shadow-lg" id="btn-squad-hero" style="width: 25%;"><a href="/hero/form" style="text-decoration:none">Create Hero</a></button>
+
+
+    </div>
+{{/partial}}
+{{> layout.hbs}}
+

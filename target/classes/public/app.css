@@ -1,0 +1,166 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-size:1.3rem;
+}
+body{
+background:url("https://images.unsplash.com/photo-1635863138275-d9b33299680b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80")no-repeat;
+background-size:cover;
+}
+.wrapper{
+width:100vw;
+height:100vh;
+font-family: 'Poppins', sans-serif;
+
+
+}
+
+.nav{
+max-height:60px;
+background-color:#A52420;
+padding:1.5rem;
+
+}
+.nav ul li a{
+font-size: 1.3rem;
+text-decoration:none;
+}
+.nav ul li{
+list-style: none;
+
+}
+.nav ul{
+display: flex;
+gap: 50px;
+justify-content: end;
+padding-top:-2rem;
+}
+.nav ul li:hover{
+border-bottom: 2px solid white;
+
+}
+//nav
+.nav{
+display:flex;
+justify-content-between;
+}
+.nav a{
+color:white;
+}
+.logo{
+padding-top:2rem;
+padding-bottom:1rem;
+}
+
+
+
+//squad form
+
+.form-container, .card{
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ box-shadow: 10px 10px 80px 0px rgba(0,0,0,0.75);
+ -webkit-box-shadow: 10px 10px 80px 0px rgba(0,0,0,0.75);
+ -moz-box-shadow: 10px 10px 80px 0px rgba(0,0,0,0.75);
+
+}
+#contact{
+margin: 10vh auto;
+width:  30%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding: 1.5rem 1rem;
+background-color:#FEF9F4;
+}
+
+fieldset{
+margin:2rem;
+}
+input{
+ width: 100%;
+ padding: 10px;
+ color:black;
+
+}
+input:focus{
+ outline: none;
+}
+button{
+ width: 100% !important;
+
+}
+
+// show. hbs
+#card{
+margin: 20vh auto;
+background-color:white;
+padding:3rem;
+}
+
+.card-body{
+margin:auto auto;
+font-size:2rem;
+text-align:center;
+color:green;
+background-color:white;
+
+}
+button{
+width:fit-content;
+}
+.button-class{
+display:flex;
+justify-content:center;
+align-items:center;
+gap: 30px;
+width:fit-content;
+}
+
+button a{
+color: black;
+font-size:2rem;
+text-decoration:none;
+
+}
+
+.squadlist{
+color:black;
+background:url("https://www.slashfilm.com/img/gallery/5-eternals-comic-characters-that-shouldve-been-in-the-movie/l-intro-1642081295.jpg");
+background-size:cover;
+padding:1.5rem;
+
+}
+.squadlist h3,p,span,a{
+font-size:17px;
+}
+.squadlist a{
+text-decoration:none;
+color:blue;
+}
+.list{
+padding:1rem;
+background-color:white;
+width: fit-content;
+
+
+}
+#squadlist{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+padding:1rem;
+box-shadow: 10px 10px 80px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 80px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 80px 0px rgba(0,0,0,0.75);
+
+}
+#btn-squad a{
+color: black;
+font-size:17px;
+}
+
+
+

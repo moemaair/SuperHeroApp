@@ -1,0 +1,32 @@
+{{#partial "content"}}
+    <section id="heroform border">
+        <form id="contact" action="/getHero/new" method="post" class="shadow-lg">
+            <h3 class="text-center">
+                <span><img src="https://cdn.iconscout.com/icon/free/png-256/iron-man-2545629-2126626.png" width="90px" height="90px"></span>
+                Add a Hero!
+            </h3>
+
+            <div class="form-group">
+                <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="Hero Name" required autofocus>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="specialPower" name ="specialPower" class="form-control form-control-sm" placeholder="specialPower" required >
+            </div>
+
+            <div class="form-group">
+                <input  type="text"  id="age" name ="age" class="form-control form-control-sm" placeholder="Age" required >
+            </div>
+
+            <div class="form-group">
+                <input  type="text"  id="weakness" name ="weakness" class="form-control form-control-sm" placeholder="Weakness" required >
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </section>
+
+
+{{/partial}}
+
+{{> layout.hbs}}
