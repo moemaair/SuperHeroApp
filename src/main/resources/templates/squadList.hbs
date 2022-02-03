@@ -1,0 +1,31 @@
+{{#partial "title"}}
+    Squads
+{{/partial}}
+
+{{> nav.hbs}}
+
+{{#partial "content"}}
+    <h3 style="color:white; text-align:center;">Available Squads! </h3>
+<div class="container  rounded" id="squadlist">
+    {{#if teams}}
+        {{#each teams}}
+            <div class="squadList">
+                <div class="list">
+                    <h3 style="color: grey"><a href="/hero">{{ name }}</a> </h3>
+                    <p>Purpose <span style="color: grey" >{{ cause }}</span></p>
+                    <p>Members in this Squad <span style="color: grey" >{{ maxMembers }}</span></p>
+                    <button type="button" class="btn btn-success shadow-lg" id="btn-squad"><a href="/hero/form" style="text-decoration:none">Create Hero</a></button>
+                </div>
+            </div>
+        {{/each}}
+        <hr>
+    {{else}}
+        <div class="emptySquad">
+            <p style="color:white; padding:4px;">no squad formed!</p>
+        </div>
+    {{/if}}
+
+</div>
+{{/partial}}
+{{> layout.hbs}}
+

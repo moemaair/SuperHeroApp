@@ -8,9 +8,8 @@ import java.util.Map;
 import static spark.Spark.*;
 
 public class App{
-    public static void main(String[] args) {
 
-        staticFileLocation("/public");
+    public static void main(String[] args) {
 
         ProcessBuilder process = new ProcessBuilder();
         Integer port;
@@ -21,6 +20,9 @@ public class App{
         }
 
         port(port);
+
+        staticFileLocation("/public");
+
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
@@ -46,15 +48,10 @@ public class App{
             return new ModelAndView(model, "squadList.hbs");
         }, new HandlebarsTemplateEngine());
 
-
-
-        get("hero", (request, response) -> { // URL to show the post form data of squad generated
-            Map<String, Object> model = new HashMap<>();
-            ArrayList<Hero> hero = Hero.all();
-            model.put("heros", hero);
+        get("/hero/form", (request, response)->{
+            Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "heroForm.hbs");
-        }, new HandlebarsTemplateEngine());
-
+        },new HandlebarsTemplateEngine());
 
         post("/getHero/new", (request, response) -> { //URL to make new post on POST route
             Map<String, Object> model = new HashMap<String, Object>();
@@ -65,6 +62,16 @@ public class App{
             Hero squad = new Hero(name, age, specialPower, weakness);
             return new ModelAndView(model, "successhero.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("hero", (request, response) -> { // URL to show the post form data of squad generated
+            Map<String, Object> model = new HashMap<>();
+            ArrayList<Hero> hero = Hero.all();
+            model.put("heros", hero);
+            return new ModelAndView(model, "heroList.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
+
 
 
 

@@ -1,8 +1,8 @@
 import org.junit.*;
+
 import static org.junit.Assert.*;
 
-class SquadTest {
-
+public class SquadTest {
     @Test
     public void squad_instantiatesCorrectly_true() {
         Squad testSquad = new Squad("Marvel", "Fighting Evil", 12);
@@ -28,6 +28,5 @@ class SquadTest {
         assertEquals(true, Squad.getInstances().contains(firstSquad));
         assertEquals(true, Squad.getInstances().contains(secondSquad));
     }
-
 
 }

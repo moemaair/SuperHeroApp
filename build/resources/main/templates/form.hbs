@@ -1,0 +1,29 @@
+{{> nav.hbs}}
+
+{{#partial "content"}}
+
+    <form  action="/getSquad/new" method="post" class="shadow-lg" id="contact" >
+        <h3>Create A Super-Hero Squad!</h3>
+        <fieldset>
+            <label for="name">Squad Name</label>
+            <input id="name" name="name" placeholder="Squad Name" type="text"   >
+        </fieldset>
+
+        <fieldset>
+            <label for="cause">Squad Cause</label>
+            <input id="cause" name="cause" placeholder="Squad Cause" type="text" >
+        </fieldset>
+
+        <fieldset>
+            <label for="maxMembers">Members</label>
+            <input id="maxMembers" name="maxMembers" placeholder="Number of Members" type="number" >
+
+        </fieldset>
+        <button  type="submit"  class="btn btn-primary p-4">Create Squad!</button>
+    </form>
+{{/partial}}
+
+{{> layout.hbs}}
+
+
+

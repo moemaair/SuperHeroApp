@@ -1,8 +1,6 @@
-Student.java
- Student
-App.java
- App
 Hero.java
  Hero
 Squad.java
  Squad
+App.java
+ App
