@@ -12,6 +12,16 @@ public class App{
 
         staticFileLocation("/public");
 
+        ProcessBuilder process = new ProcessBuilder();
+        Integer port;
+        if (process.environment().get("PORT") != null) {
+            port = Integer.parseInt(process.environment().get("PORT"));
+        } else {
+            port = 4567;
+        }
+
+        port(port);
+
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             return new ModelAndView(model, "form.hbs");
@@ -22,7 +32,7 @@ public class App{
             Map<String, Object> model = new HashMap<String, Object>();
             String name = request.queryParams("name");
             String cause = request.queryParams("cause");
-            String maxMembers = request.queryParams("maxMembers");
+            int maxMembers = Integer.parseInt(request.queryParams("maxMembers"));
             Squad squad = new Squad(name, cause, maxMembers);
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
@@ -49,9 +59,10 @@ public class App{
         post("/getHero/new", (request, response) -> { //URL to make new post on POST route
             Map<String, Object> model = new HashMap<String, Object>();
             String name = request.queryParams("name");
-            String cause = request.queryParams("cause");
-            String maxMembers = request.queryParams("maxMembers");
-            Squad squad = new Squad(name, cause, maxMembers);
+            int age = Integer.parseInt(request.queryParams("age"));
+            String specialPower = request.queryParams("specialPower");
+            String weakness = request.queryParams("weakness");
+            Hero squad = new Hero(name, age, specialPower, weakness);
             return new ModelAndView(model, "successhero.hbs");
         }, new HandlebarsTemplateEngine());
 
