@@ -6,7 +6,7 @@
 
   This a Java app that allows you to recruit a well-balanced team of superheroes.It Allows users to assign Heroes to a Squad. But Each hero can only participate in one Squad at a time.Enjoy the game's interface and reach out if anybugs are experinced.
 
- Here's the link to Live site :<  >
+ Here's the link to Live site :< https://ibrahim-hero-squad-app.herokuapp.com/ >
 
 ### Prerequisites
 
